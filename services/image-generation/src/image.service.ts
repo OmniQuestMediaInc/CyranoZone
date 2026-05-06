@@ -19,7 +19,6 @@ import {
 } from './image.types';
 
 const NATS_IMAGE_GENERATED = 'cyrano.image.generated';
-const NATS_IMAGE_FAILED = 'cyrano.image.failed';
 
 const BANANA_API_KEY = process.env.BANANA_API_KEY ?? '';
 const BANANA_MODEL_KEY_FLUX_PRO = process.env.BANANA_MODEL_KEY_FLUX_PRO ?? '';
@@ -157,10 +156,7 @@ export class ImageService {
 
   // ─── Private helpers ──────────────────────────────────────────────────────
 
-  private async callBananaDev(
-    model: string,
-    inputs: Record<string, unknown>,
-  ): Promise<string> {
+  private async callBananaDev(model: string, inputs: Record<string, unknown>): Promise<string> {
     if (!BANANA_API_KEY) {
       throw new Error('BANANA_API_KEY not configured — image generation unavailable');
     }
@@ -196,9 +192,6 @@ export class ImageService {
 
   private async hashPrompt(prompt: string, model: string, ratio: string): Promise<string> {
     const { createHash } = await import('node:crypto');
-    return createHash('sha256')
-      .update(`${model}:${ratio}:${prompt}`)
-      .digest('hex')
-      .slice(0, 64);
+    return createHash('sha256').update(`${model}:${ratio}:${prompt}`).digest('hex').slice(0, 64);
   }
 }

@@ -4,11 +4,7 @@ const config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   rootDir: '.',
-  roots: [
-    '<rootDir>/tests/integration',
-    '<rootDir>/services',
-    '<rootDir>/ui',
-  ],
+  roots: ['<rootDir>/tests/integration', '<rootDir>/services', '<rootDir>/ui'],
   testMatch: [
     '<rootDir>/tests/integration/**/*.spec.ts',
     '<rootDir>/tests/e2e/**/*.spec.ts',

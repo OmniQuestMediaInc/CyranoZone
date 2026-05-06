@@ -95,23 +95,27 @@ export interface SessionTopUpView {
   can_purchase: boolean;
   generated_at_utc: string;
   rule_applied_id: string;
-// Screen 03 — Persona Management (Creator + VIP) UI contracts.
-// CyranoPersona scope hierarchy: global → template → per-VIP custom.
-// Rendered on /creator/cyrano/personas.
+}
+
+// ── Screen 03 (Cyrano variant) — /creator/cyrano/personas ───────────────────
+// Separate vocabulary from the Block A persona contracts above:
+// scope hierarchy is global → template → per-VIP custom (lowercase) and
+// tier-lock reuses MembershipTier rather than the OPEN/HOT/INFERNO triad.
+// Renamed to a Cyrano* prefix to avoid collision with the Block A symbols.
 
 import type { MembershipTier } from './session-topup-contracts';
 
-/** Which scope level a persona belongs to. */
-export type PersonaScope = 'global' | 'template' | 'custom';
+/** Which scope level a Cyrano persona belongs to. */
+export type CyranoPersonaScope = 'global' | 'template' | 'custom';
 
 /**
- * Tier gate on a persona's publish visibility.
+ * Tier gate on a Cyrano persona's publish visibility.
  * null = visible to all eligible VIPs (no additional restriction).
  * A MembershipTier value = visible only at that tier or above.
  */
-export type PersonaTierLock = MembershipTier | null;
+export type CyranoPersonaTierLock = MembershipTier | null;
 
-/** One persona card as rendered in the management grid. */
+/** One Cyrano persona card as rendered in the management grid. */
 export interface CyranoPersonaCard {
   persona_id: string;
   creator_id: string;
@@ -120,9 +124,9 @@ export interface CyranoPersonaCard {
   avatar_url: string | null;
   tone: string;
   style_notes: string;
-  scope: PersonaScope;
+  scope: CyranoPersonaScope;
   /** Tier required to interact with this persona as a VIP guest. */
-  tier_lock: PersonaTierLock;
+  tier_lock: CyranoPersonaTierLock;
   active: boolean;
   /** 1-based display order within the scope tab; controls drag-to-reorder. */
   sort_order: number;
@@ -130,23 +134,23 @@ export interface CyranoPersonaCard {
   published: boolean;
 }
 
-/** The active tab on the Persona Management page. */
-export type PersonaManagementTab = PersonaScope;
+/** The active tab on the Cyrano Persona Management page. */
+export type CyranoPersonaManagementTab = CyranoPersonaScope;
 
-/** Inputs to the Persona Management page render function. */
-export interface PersonaManagementPageInputs {
+/** Inputs to the Cyrano Persona Management page render function. */
+export interface CyranoPersonaManagementPageInputs {
   creator_id: string;
   /** Which tab is currently selected. */
-  active_tab: PersonaManagementTab;
+  active_tab: CyranoPersonaManagementTab;
   global_personas: CyranoPersonaCard[];
   template_personas: CyranoPersonaCard[];
   custom_personas: CyranoPersonaCard[];
 }
 
-/** Shape returned by renderPersonaManagementPage. */
-export interface PersonaManagementPageView {
+/** Shape returned by renderCyranoPersonaManagementPage. */
+export interface CyranoPersonaManagementPageView {
   creator_id: string;
-  active_tab: PersonaManagementTab;
+  active_tab: CyranoPersonaManagementTab;
   active_personas: CyranoPersonaCard[];
   total_global: number;
   total_templates: number;

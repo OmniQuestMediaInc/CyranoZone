@@ -170,10 +170,13 @@ const checks: Array<() => CheckResult> = [
   },
   () => {
     const recovery = readSafe('services/recovery/src/recovery.service.ts') ?? '';
+    // Match the JS canonical numeric form (`0.2` and `0.6`) and tolerate the
+    // optional trailing zero. Word boundary prevents false-pass on `0.65` /
+    // `0.25`.
     const ok =
       recovery.includes('FIZ-002-REVISION-2026-04-11') &&
-      recovery.includes('TOKEN_BRIDGE_BONUS_PCT: 0.20') &&
-      recovery.includes('THREE_FIFTHS_REFUND_PCT: 0.60');
+      /TOKEN_BRIDGE_BONUS_PCT:\s*0\.20?\b/.test(recovery) &&
+      /THREE_FIFTHS_REFUND_PCT:\s*0\.60?\b/.test(recovery);
     return {
       id: 'GATE-3',
       category: 'Welfare + safety',
