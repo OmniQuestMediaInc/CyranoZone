@@ -2,9 +2,9 @@
 
 Auto-generated on every push. Do not edit manually.
 
-**Branch:** `main`
-**Commit:** `e765a49e88f299e418a26234e3a6c3428000d664`
-**Generated:** 2026-05-03T04:45:23Z
+**Branch:** `claude/cyrano-audit-hygiene-ovYDN`
+**Commit:** `17af782f8d72a868f3fc4f095e171243fbdec81d`
+**Generated:** 2026-05-06T04:57:03Z
 
 ## All Files
 
