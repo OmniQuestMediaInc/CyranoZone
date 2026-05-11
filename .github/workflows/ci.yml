@@ -110,11 +110,8 @@ jobs:
       - name: Prisma validate
         run: yarn prisma validate
 
-      - name: Format check (prettier)
-        run: yarn format:check
-
-      - name: Lint
-        run: yarn lint
+      - name: Lint parity gate (Python + JS/TS)
+        run: yarn lint:ci
 
       - name: Typecheck
         run: yarn typecheck
