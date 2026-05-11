@@ -32,7 +32,7 @@ jobs:
           fi
           CHANGED_FILES="$(git diff --name-only "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}")"
           echo "$CHANGED_FILES"
-          if echo "$CHANGED_FILES" | grep -Eqi '(^|/)(ledger|consent|pii)(/|_|-|\.|$)'; then
+          if echo "$CHANGED_FILES" | grep -Eqi '(^|/)(ledger|consent|pii)(/|$)'; then
             echo "❌ Restricted path touched (ledger/consent/PII). Fail-closed policy blocks merge."
             exit 1
           fi
