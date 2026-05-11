@@ -3,11 +3,8 @@
 Auto-generated on every push. Do not edit manually.
 
 **Branch:** `dependabot/npm_and_yarn/apps/cyrano-standalone/npm_and_yarn-152f59e559`
-**Commit:** `5247affeb377a7a4a0d31afb380f5d14b379cbe9`
-**Generated:** 2026-05-11T19:33:30Z
-**Branch:** `copilot/update-grok-primary-agent`
-**Commit:** `478d8d053e0e710c21a5361d740f57d6b1fdc5e4`
-**Generated:** 2026-05-11T19:49:40Z
+**Commit:** `6e28f6ee4fa64a1f37a7207bd0462e219edd4ce3`
+**Generated:** 2026-05-11T20:12:48Z
 
 ## All Files
 
