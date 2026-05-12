@@ -2,9 +2,9 @@
 
 Auto-generated on every push. Do not edit manually.
 
-**Branch:** `copilot/phase-0-5-ecosystem-lint-parity`
-**Commit:** `20083a8c74d2c4e5eaf180c398275bf2a85d48b2`
-**Generated:** 2026-05-12T06:09:03Z
+**Branch:** `dependabot/npm_and_yarn/apps/cyrano-standalone/npm_and_yarn-152f59e559`
+**Commit:** `db68e7e7e4465e5fe08bf7a656791d47e272f82e`
+**Generated:** 2026-05-12T06:19:24Z
 
 ## All Files
 
