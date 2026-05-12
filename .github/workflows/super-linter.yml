@@ -40,14 +40,19 @@ jobs:
           VALIDATE_PYTHON: true
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_TYPESCRIPT_ES: true
+          VALIDATE_ESLINT: true
 
           # Reduce noise/churn and prevent scanning build artifacts
           VALIDATE_ALL_CODEBASE: false
+          VALIDATE_YAML_ALL_CODEBASE: false
+          YAMLVALIDATE_ALL_CODEBASE: false
           IGNORE_GITIGNORED_FILES: true
 
           # Restrict linting to canonical governance/docs plus active mixed-language codepaths
           # Matches: .github/**, docs/**, gateguard/**, services/**, ui/**, and root-level markdown/yaml/json
           FILTER_REGEX_INCLUDE: ^(\.github/|docs/|gateguard/|services/|ui/|[^/]+\.(md|yml|yaml|json)$)
+          # Restrict linting to non-code governance/docs + root-level config/source files.
+          FILTER_REGEX_INCLUDE: ^(\.github/|docs/|PROGRAM_CONTROL/|[^/]+\.(md|yml|yaml|json|ts|js)$)
 
           # Belt-and-suspenders: keep heavy / irrelevant trees out even if regex widens later
           FILTER_REGEX_EXCLUDE: (^|/)(LEGACY_CONFIGS|archive|node_modules|dist|\.next|out)/
