@@ -51,7 +51,7 @@ All tasks in CNZ-WORK-001.md previously assigned `Agent: claude-code` are now as
 
 ## STEP 3 — EXECUTION PROTOCOL
 
-1. Find the next unblocked `QUEUED` task in CNZ-WORK-001.md (or any CYR-_ / STUDIO-_ directive in `PROGRAM_CONTROL/DIRECTIVES/QUEUE/`).
+1. Find the next unblocked `QUEUED` task in CNZ-WORK-001.md (or any `CYR-*` / `STUDIO-*` directive in `PROGRAM_CONTROL/DIRECTIVES/QUEUE/`).
 2. Check for conflicts (Touches: field overlap) per Autonomous Directive Protocol §3.
 3. Create branch `grok/<directive-id-lowercase>`.
 4. Execute the directive exactly as written (Droid Mode).
