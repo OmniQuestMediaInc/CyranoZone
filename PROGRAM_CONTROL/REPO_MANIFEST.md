@@ -3,8 +3,8 @@
 Auto-generated on every push. Do not edit manually.
 
 **Branch:** `copilot/cleanup-governance-sync-again`
-**Commit:** `37c84885b44a35ad91b2f4c1fbdd08af3c9861cf`
-**Generated:** 2026-05-14T09:35:22Z
+**Commit:** `e7dad68555138651e5c16fb249df203428212e69`
+**Generated:** 2026-05-14T09:38:05Z
 
 ## All Files
 
@@ -259,6 +259,7 @@ Auto-generated on every push. Do not edit manually.
 - `PROGRAM_CONTROL/REPORT_BACK/fix-yarn-lockfile-ci.md`
 - `PROGRAM_CONTROL/REPO_MANIFEST.md`
 - `PROGRAM_CONTROL/WORK-ORDER-v0.9.8.md`
+- `PROGRAM_CONTROL/WORK-ORDER-v0.9.x.md`
 - `PROGRAM_CONTROL/ship-gate-verifier.js`
 - `PROGRAM_CONTROL/ship-gate-verifier.ts`
 - `README.md`
