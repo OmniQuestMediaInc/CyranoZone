@@ -2,9 +2,9 @@
 
 Auto-generated on every push. Do not edit manually.
 
-**Branch:** `copilot/cleanup-governance-sync-again`
-**Commit:** `e7dad68555138651e5c16fb249df203428212e69`
-**Generated:** 2026-05-14T09:38:05Z
+**Branch:** `main`
+**Commit:** `6eb72dce58bef2f661797539580fd7008b62cb68`
+**Generated:** 2026-05-19T00:00:25Z
 
 ## All Files
 
@@ -360,6 +360,7 @@ Auto-generated on every push. Do not edit manually.
 - `docs/DOMAIN_GLOSSARY.md`
 - `docs/MEMBERSHIP_LIFECYCLE_POLICY.md`
 - `docs/PRE_LAUNCH_CHECKLIST.md`
+- `docs/PRODUCTS/SythiMateWhisper-Spec.md`
 - `docs/REQUIREMENTS_MASTER.md`
 - `docs/ROADMAP_MANIFEST.md`
 - `docs/RRR_CEO_DECISIONS_FINAL_2026-04-17.md`
